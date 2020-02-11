@@ -50,3 +50,20 @@
 		transform: translateY(-50%);
 	}
 }
+@mixin btn-2 {
+	color: $white-color;
+	font: 300 100%/1 $main-font-family;
+	text-transform: uppercase;
+	text-align: center;
+    padding: .8em 2.3em;
+	border: .1em solid transparent;
+	border-radius: 0;
+	display: inline-block;
+	transition: background-color 0.25s ease-in-out,color 0.25s ease-in-out,border 0.25s ease-in-out,transform 0.25s ease-in-out;
+	border-color: $white-color;
+	&:hover {
+		border-color: transparent;
+		background-color: rgba(255,255,255,.8);
+		color: #555;
+	}
+}
