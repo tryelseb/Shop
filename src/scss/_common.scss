@@ -1,0 +1,115 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222;
+    font: 300 16px/1.6 $main-font-family;
+    transition: all .2s ease-in-out;
+}
+a,p,ul,span,li{
+    line-height: inherit;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+p {
+    margin-bottom: 0;
+}
+p,
+label {
+    font-size: 16px;
+    line-height: 1.5;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+a:link {text-decoration: none; padding: 0;}
+a:visited {text-decoration: none; padding: 0;}
+a:hover {text-decoration: none; padding: 0;}
+a:active {text-decoration: none; padding: 0;}
+
+a {
+    color: $white-color;
+}
+  .mb-30 {
+      position: relative;
+      z-index: 1;
+  }
+  .no-mr {
+      .columns {
+          padding: 0;
+      }
+  }
+  .no-pd {
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+  .d-flex {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  }
+.p-r {
+    position: relative;
+    z-index: 3;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.pb-50 {
+    padding: 50px 0;
+}
+@media screen and (max-width: 639px) {
+    .hide-639 {
+        display: none;
+    }
+}
+.nopadding {
+    padding: 0;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+::-webkit-input-placeholder {color:#666;}
+::-moz-placeholder          {color:#666;}/* Firefox 19+ */
+:-moz-placeholder           {color:#666;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#666;}
+
+
+
+// MY LIBRARY CSS 
+//-- author tryelseb
+.wrp-btn {
+    display: flex;
+}
+.wrp-title {
+    margin-bottom: 20px;
+    &>* {
+        color: rgb(34, 43, 34);
+        font: 600 45px/1.2 $main-font-family;
+        letter-spacing: 0;
+        @media screen and (max-width: 639px) {
+            font-size: 32px;
+        }
+    }
+}
+
+.hide-on-desktop {
+    @media screen and (min-width: 960px) {
+        display: none;
+    }
+}
+a {
+    transition: all .3s;
+    &:hover {
+        transition: all .3s;
+    }
+}
+//--
+////////////////////

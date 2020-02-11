@@ -1,0 +1,52 @@
+// MY MIXIN LIBRARY
+//-- author: @truelseb
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-start-center {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+@mixin flex-start-bottom {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+}
+
+@mixin flex-start-bottom-r {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	flex-direction: column;
+}
+//--
+///////////////////////
+
+@mixin btn {
+	color: $white-color;
+	font: 300 150%/1 $main-font-family;
+	text-transform: uppercase;
+	display: inline-block;
+    text-align: center;
+    padding: .8em 2.3em;
+	border: .1em solid transparent;
+	background-color: #1a2d40;
+	position: relative;
+	transition: background-color 0.25s ease-in-out,color 0.25s ease-in-out,border 0.25s ease-in-out,transform 0.25s ease-in-out;
+	&:hover {
+		background-color: #294764;
+	}
+	&:after {
+		min-width: 0;
+		min-height: 0;
+		content: '\00BB';
+		position: absolute;
+		top: 45%;
+    	right: 10%;
+		transform: translateY(-50%);
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "name": "tryelseb",
+  "version": "0.0.0",
+  "authors": [
+    "Insayt <tryelseb@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  }
+}
