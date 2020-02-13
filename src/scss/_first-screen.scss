@@ -1,7 +1,7 @@
 /* ## Map z-index ##
-# .main-header - 1001    
+# .main-header - 1001 
+# .loup-popup  - 100001
 */
-// .header,
 
 .font-size {
     font-size: 3vw;
@@ -378,7 +378,7 @@
     }
 
     h5 {
-        font-size: 80%;
+        font-size: 90%;
         margin-bottom: .1em;
         min-height: 45px;
         font-weight: 400;
@@ -386,9 +386,9 @@
     }
 
     span {
-        font-size: 14px;
+        font-size: 75%;
         display: block;
-        color: #ababab;
+        color: #1a2d40;
         margin-bottom: .3em;
     }
 
@@ -414,6 +414,9 @@
         border: .1em solid #1a2d40;
         display: inline-block;
         transition: all .5s;
+        margin-right: .5em;
+        font-size: 85%;
+        text-transform: uppercase;
         &:hover {
             background-color: #1a2d40;
             color: $white-color;
@@ -421,14 +424,14 @@
         }
     }
     &__btn-basket {
-        display: block;
-        font-size: 11px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #1a2d40;
-        padding: 0.8em;
+        padding: 0.7em;
         color: $white-color;
-        i {
-            transform: scale(1.3) translateY(.05em);
-        }
+        text-align: center;
     }
     
 }
@@ -752,10 +755,12 @@ a.btn-footer {
 /// Product ///
 .item {
     padding: 3vw;
-
+    
     &__content {
+        margin-bottom: 3em;
         @media screen and (min-width: 1024px) {
             padding: 15px 15px 15px 2em;
+            margin-bottom: 0;
         }
     }
 
@@ -954,30 +959,132 @@ a.btn-footer {
 
     .numreviews {
         font-size: .9em;
-        color: #1a2d40;
+        color: #222;
+        font-weight: 400;
     }
 }
 
 .similar-item {
     padding: 0 3vw 3vw;
-    .wrp-title {
-        margin-bottom: 3em;
-        position: relative;
-        & > * {
-            font-size: 175%;
-        }
-        &:after {
-            content: "";
-            position: absolute;
-            left: 50%;
-            bottom: -45%;
-            transform: translate(-50%,-50%);
-            width: 10%;
-            height: 3px;
-            background-color: #1a2d40;
-        }
-    }
     .info__rate .rate {
         height: auto;
+    }
+}
+.wrp-title-bt {
+    margin-bottom: 3em;
+    position: relative;
+    & > * {
+        font: 900 195%/1.3 $main-font-family;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -45%;
+        transform: translate(-50%,-50%);
+        width: 10%;
+        height: 3px;
+        background-color: #1a2d40;
+    }
+}
+.customer-rate {
+    padding: 3vw;
+    .info__rate {
+        font-size: 31px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .number {
+        font-size: 60%;
+        margin-bottom: .3em;
+        font-weight: 900;
+        color: #222;
+    }
+    .numreviews {
+        font-size: 12px;
+    }
+    .comments {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        &__rate {
+            flex: 0 0 auto;
+            .info__rate {
+                font-size: 75%;
+                padding: 1em;
+            }
+        }
+        &__text {
+            flex: 1 1 auto;
+            padding: 1em;
+            p {
+                margin-bottom: 1em;
+            }
+        }
+    }
+    .number-page {
+        padding: 1em;
+        text-align: center;
+    }
+}
+
+.l-popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3em;
+    &__layout {
+        transition: opacity 0.3s;
+        z-index: 10001;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);   
+    }   
+    &.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrp-popup {
+        max-height: 100%;
+        position: relative;
+        z-index: 10002;
+        background-color: $white-color;
+        min-width: 0;
+        min-height: 0;
+        display: block;
+        overflow: auto;
+        .popup {
+            max-width: 1050px;
+            position: relative;
+            z-index: 10003;
+            min-width: 0;
+            min-height: 0;
+            box-shadow: 6px 6px 0 rgba(0,0,0,.2);
+            padding: 3vw;
+        }
+    }
+    .cancel {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        right: 1vw;
+        top: 1vw;
+        overflow: visible;
+        z-index: 10004;
+        i{
+            color: $white-color;
+            font-size: 42px;
+        }
     }
 }
