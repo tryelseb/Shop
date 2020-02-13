@@ -170,6 +170,11 @@ body {
     padding: 10px;
     background-color: #c19a67;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     p {
         color: $white-color;
         font-size: 100%;
@@ -181,14 +186,14 @@ body {
     }
 }
 .section-1{
-    padding: 3vw;
+    padding: 6em 3vw 4em;
     background-image: linear-gradient(rgba(#c19a67,.1), rgba(#c19a67,.1)), url('../images/bg-section-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     color: $white-color;
+    position: relative;
     @media screen and (min-height: 700px) and (min-width:500px) {
-        min-height: 960px;
-        height: 1px;
+        padding: 4em 3vw;
     }
     .content {
         .wrp-title {
@@ -213,7 +218,9 @@ body {
         }
     }
     & > .row {
-        height: 100%;
+        @media screen and (min-height: 700px) and (min-width:500px) {
+            min-height: 960px;
+        }
     }
 }
 .section-2 {
