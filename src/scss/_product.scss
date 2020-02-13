@@ -1,0 +1,286 @@
+.item {
+    padding: 3vw;
+    
+    &__content {
+        margin-bottom: 3em;
+        @media screen and (min-width: 1024px) {
+            padding: 15px 15px 15px 2em;
+            margin-bottom: 0;
+        }
+    }
+
+    &__gallery {
+        @media screen and (min-width: 1024px) {
+            padding: 15px 2em 15px 15px;
+        }
+        a {
+            cursor: zoom-in;
+            display: block;
+
+            img {
+                max-width: 100%;
+                min-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: 1em;
+
+        img {
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .img {
+        &__list {
+            @include flex-center;
+        }
+
+        &__items {
+            max-width: 125px;
+            height: auto;
+
+            &:not(:last-child) {
+                margin-right: 1em;
+            }
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .info {
+        margin-bottom: 3em;
+        &__title {
+            margin-bottom: 0.3em;
+
+            &>* {
+                font: 400 260%/1.3 $main-font-family;
+            }
+        }
+
+        h2 {
+            font: 300 140%/1.5 $main-font-family;
+            margin-bottom: 1em;
+        }
+
+        &__price {
+            font-size: 1.5em;
+            margin-bottom: 0.4em;
+            font-weight: 400;
+        }
+
+        &__text {
+            line-height: 1.7;
+            margin: 2em 0 1em;
+        }
+
+        &__list {
+            display: flex;
+            margin: 1em 0;
+        }
+
+        &__items {
+            padding-left: 1.3em;
+            position: relative;
+            font-size: 0.9em;
+            color: #222;
+            font-weight: 400;
+
+            &::after {
+                content: '\f00c';
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                color: #c19a67;
+            }
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        .social {
+            &__list {
+                font-size: 23px;
+            }
+        }
+    }
+
+    .table{
+        font-size: .9em;
+        font-weight: 400;
+        a {
+            color: #1a2d40;
+            text-decoration: underline;
+        }
+        tr td {
+            padding: .4em 2em .4em 0;
+        }
+    }
+}
+
+.wrp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .btn-custom {
+        margin-right: 15px;
+        background-color: #1a2d40;
+        color: $white-color;
+        font: 300 100%/1 $main-font-family;
+        text-align: center;
+        border: .1em solid transparent;
+        padding: .8em 2.3em;
+        text-transform: uppercase;
+        transition: all .3s;
+        display: block;
+
+        &:hover {
+            transition: all .3s;
+            background-color: #294764;
+        }
+    }
+
+    .btn-add {
+        color: #1a2d40;
+        font: 300 100%/1 $main-font-family;
+        text-align: center;
+        border: .1em solid #1a2d40;
+        padding: .8em 2.3em .8em 3.3em;
+        text-transform: uppercase;
+        transition: all .3s;
+        display: block;
+        position: relative;
+
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f290";
+            position: absolute;
+            left: 9%;
+            top: 50%;
+            transform: translateY(-55%);
+            font-size: 110%;
+            color: #1a2d40;
+        }
+    }
+}
+
+.similar-item {
+    padding: 0 3vw 3vw;
+    .info__rate .rate {
+        height: auto;
+    }
+}
+
+.customer-rate {
+    padding: 3vw;
+    .info__rate {
+        font-size: 31px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .number {
+        font-size: 60%;
+        margin-bottom: .3em;
+        font-weight: 900;
+        color: #222;
+    }
+    .numreviews {
+        font-size: 12px;
+    }
+    .comments {
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        &__rate {
+            flex: 0 0 auto;
+            .info__rate {
+                font-size: 75%;
+                padding: 1em;
+            }
+        }
+        &__text {
+            flex: 1 1 auto;
+            padding: 1em;
+            p {
+                margin-bottom: 1em;
+            }
+        }
+    }
+    .number-page {
+        padding: 1em;
+        text-align: center;
+    }
+}
+
+.l-popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3em;
+    &__layout {
+        transition: opacity 0.3s;
+        z-index: 10001;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);   
+    }   
+    &.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrp-popup {
+        max-height: 100%;
+        position: relative;
+        z-index: 10002;
+        background-color: $white-color;
+        min-width: 0;
+        min-height: 0;
+        display: block;
+        overflow: auto;
+        .popup {
+            max-width: 1050px;
+            position: relative;
+            z-index: 10003;
+            min-width: 0;
+            min-height: 0;
+            box-shadow: 6px 6px 0 rgba(0,0,0,.2);
+            padding: 3vw;
+        }
+    }
+    .cancel {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        right: 1vw;
+        top: 1vw;
+        overflow: visible;
+        z-index: 10004;
+        i{
+            color: $white-color;
+            font-size: 42px;
+        }
+    }
+}
