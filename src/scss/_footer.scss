@@ -1,0 +1,133 @@
+.footer {
+    color: $white-color;
+    background-color: #1a2d40;
+
+    .first-stage,
+    .second-stage {
+        padding: 4vw 3vw;
+    }
+
+    .first-stage {
+        .row:first-child .columns {
+            @media screen and (max-width: 1023px) {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    &__list {
+        font-size: 125%;
+
+        @media screen and (max-width: 1023px) {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+    }
+
+    &__items {
+        padding: 0 2em;
+
+        a {
+            color: inherit;
+            font-size: 100%;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    h4 {
+        font: 400 150%/1.3 $main-font-family;
+        margin: 0 auto 1em;
+        max-width: 360px;
+    }
+
+    .wrp-img {
+        a {
+            margin: 0 auto;
+            display: block;
+            max-width: 40%;
+        }
+    }
+
+    .social {
+        &__menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 1023px) {
+                margin-bottom: 1em;
+            }
+        }
+
+        &__items {
+            padding: 0 .9em;
+
+            a {
+                display: block;
+                color: $white-color;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}
+.social {
+    &__list {
+        display: flex;
+    }
+
+    &__items {
+        @include flex-center;
+
+        &:not(:last-child) {
+            margin-right: 1em;
+        }
+
+        &:first-child a {
+            font-size: 60%;
+            cursor: default;
+
+            &:hover {
+                color: #ababab;
+            }
+        }
+        &:nth-child(2) a {
+            &:hover {
+                color: #1a2d40;
+            }
+        }
+        &:nth-child(3) a {
+            &:hover {
+                color: #69f;
+            }
+        }
+        &:nth-child(4) a {
+            &:hover {
+                color: #c8232c;
+            }
+        }
+        a {
+            display: block;
+            color: #ababab;
+            font-weight: 300;
+            font-size: 100%;
+            text-transform: uppercase;
+        }
+    }
+}
+a.btn-footer {
+    color: $white-color;
+    font: 300 100%/1 $main-font-family;
+    text-transform: uppercase;
+    padding: .8em 2.3em;
+    border: .1em solid transparent;
+    border-radius: 0;
+    display: inline-block;
+    background-color: #c19a67;
+}

@@ -6,6 +6,9 @@ html, body {
     font: 300 16px/1.6 $main-font-family;
     transition: all .2s ease-in-out;
 }
+body {
+    -webkit-font-smoothing: auto;
+}
 a,p,ul,span,li{
     line-height: inherit;
 }
@@ -28,56 +31,29 @@ h1, h2, h3, h4, h5, h6{
 select {
     margin: 0;
 }
-a:link {text-decoration: none; padding: 0;}
-a:visited {text-decoration: none; padding: 0;}
-a:hover {text-decoration: none; padding: 0;}
-a:active {text-decoration: none; padding: 0;}
+a:link {text-decoration: none; }
+a:visited {text-decoration: none; }
+a:hover {text-decoration: none; }
+a:active {text-decoration: none; }
 
 a {
     color: $white-color;
 }
-  .mb-30 {
-      position: relative;
-      z-index: 1;
-  }
-  .no-mr {
-      .columns {
-          padding: 0;
-      }
-  }
-  .no-pd {
-      padding-left: 5px;
-      padding-right: 5px;
-  }
+.pt-3em {
+    padding: 3em 0;
+}
   .d-flex {
       display: flex;
       align-items: center;
       justify-content: flex-end;
   }
-.p-r {
-    position: relative;
-    z-index: 3;
-}
-.mb-50 {
-    margin-bottom: 50px;
-}
-.pb-50 {
-    padding: 50px 0;
-}
+
 @media screen and (max-width: 639px) {
     .hide-639 {
         display: none;
     }
 }
-.nopadding {
-    padding: 0;
-}
-.mb-20 {
-    margin-bottom: 20px;
-}
-.mb-30 {
-    margin-bottom: 30px;
-}
+
 ::-webkit-input-placeholder {color:#666;}
 ::-moz-placeholder          {color:#666;}/* Firefox 19+ */
 :-moz-placeholder           {color:#666;}/* Firefox 18- */
@@ -124,3 +100,142 @@ a {
 }
 //--
 ////////////////////
+.info__rate {
+    display: flex;
+    align-items: flex-end;
+    font-size: 100%;
+
+    .rate {
+        display: inline-flex;
+        height: 1.5em;
+        position: relative;
+        margin-right: .5em;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+
+        img:last-child {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 94%;
+            object-fit: cover;
+            object-position: left;
+        }
+    }
+
+    .numreviews {
+        font-size: .9em;
+        color: #222;
+        font-weight: 400;
+    }
+}
+.wrp-title-bt {
+    margin-bottom: 3em;
+    position: relative;
+    & > * {
+        font: 900 195%/1.3 $main-font-family;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -45%;
+        transform: translate(-50%,-50%);
+        width: 10%;
+        height: 3px;
+        background-color: #1a2d40;
+    }
+}
+.product {
+    display: block;
+    color: #000;    
+    margin-bottom: 1em;
+
+    &__img {
+        padding-top: 99.99%;
+        position: relative;
+        margin-bottom: .5em;
+        display: block;
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            object-fit: cover;
+        }
+    }
+
+    h5 {
+        font-size: 90%;
+        margin-bottom: .1em;
+        min-height: 45px;
+        font-weight: 400;
+        color: #1a2d40;
+    }
+
+    span {
+        font-size: 75%;
+        display: block;
+        color: #1a2d40;
+        margin-bottom: .3em;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:last-child {
+            margin-top: 1em;
+            justify-content: center;
+        }
+
+        p {
+            font-weight: 400;
+            color: #333;
+        }
+    }
+
+    &__btn {
+        color: #1a2d40;
+        font: 300 60%/1 $main-font-family;
+        padding: 0.5em;
+        border: .1em solid #1a2d40;
+        display: inline-block;
+        transition: all .5s;
+        margin-right: .5em;
+        font-size: 85%;
+        text-transform: uppercase;
+        &:hover {
+            background-color: #1a2d40;
+            color: $white-color;
+            transition: all .5s;
+        }
+    }
+    &__btn-basket {
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a2d40;
+        padding: 0.7em;
+        color: $white-color;
+        text-align: center;
+    }
+    
+}
+.font-size {
+    font-size: 3vw;
+
+    @media screen and (min-width: 639px) {
+        font-size: 2vw;
+    }
+
+    @media screen and (min-width: 1023px) {
+        font-size: 1.2vw;
+    }
+}

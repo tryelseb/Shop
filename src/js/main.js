@@ -29,4 +29,16 @@ $(document).ready(function () {
       }, 100);
     }
   });
+
+  $('.item__img').on("click", function() {
+    $('#l-popup').addClass('active');
+
+    $(this).children('img').clone().appendTo(".popup");
+
+    $('.cancel').click(function() {
+      $('#l-popup').removeClass('active');
+      $('.popup').children('img').remove();
+    });
+  });
+
 });
