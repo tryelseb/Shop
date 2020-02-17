@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Shop</title>
+    <link rel="shortcut icon" type="image/jpg" title="Sergif Media Limited" href="images/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body class="font-size">
+
+    //= template/header.html
+    <main class="main-content">
+        <section class="checkout" id="checkout">
+            <div class="row expanded text-center">
+                <div class="columns small-12">
+                    <div class="wrp-title-bt">
+                        <h1>Shopping Cart</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row expanded cart-product">
+                <div class="columns large-2">
+                    <div class="cart-product__img">
+                        <img src="images/ckeckout-product.jpg" alt="">
+                    </div>
+                </div>
+                <div class="columns large-10">
+                    <div class="cart-product__content">
+                        <div class="cart-product__row">
+                            <a href="javascript:void(0)" class="cart-product__tite">
+                                    White twill weaved cotton shirt
+                            </a>
+                            <p class="price">$59</p>
+                        </div>
+                        <a href="javascript:void(0)" class="cart-product__info" id="more-info">
+                            Summit, white - <span class="underline">More info</span>
+                            <div class="table">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Fabric </td>
+                                            <td>
+                                                <span>Princeton, white and light blue (100% Long Staple Cotton) </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Collar 
+                                            </td>
+                                            <td>
+                                                <span>Business Classic </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Cuff </td>
+                                            <td>
+                                                <span>Convertible </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Button 
+                                            </td>
+                                            <td>
+                                                <span>Arezzo, white </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Colour </td>
+                                            <td>
+                                                <span>
+                                                    Blue
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Pattern </td>
+                                            <td>
+                                                <span>
+                                                    Striped
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Weave </td>
+                                            <td>
+                                                <span>Herringbone
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Bottom cut: 
+                                            </td>
+                                            <td>
+                                                <span>
+                                                    Modern
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </a>
+                        <div class="cart-product__count">
+                            <span class="fas fa-minus-square minus"></span>
+							<span class="count" id="count_1">1</span>
+							<span class="fas fa-plus-square plus"></span>
+                        </div>
+                        <p class="cart-product__note">
+                            Please specify measurements
+                        </p>
+                        <ul class="cart-product__link">
+                            <li>
+                                <a href="">Customize</a>
+                            </li>
+                            <li>
+                                <a href="">Copy to designer</a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Choose your measurements
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    //= template/footer.html
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

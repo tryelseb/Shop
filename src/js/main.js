@@ -49,4 +49,12 @@ $(document).ready(function () {
       });
     });
   //
+
+  // Checkout more info - open/close
+  $('#more-info').click(function(){
+    $('.underline').toggleClass('active');
+    $(this).children('.table').slideToggle('fast');
+  });
+//
+  
 });

@@ -1,0 +1,100 @@
+.checkout {
+    padding: 3vw;
+
+    .cart-product {
+        padding: 2em 0;
+        border-bottom: 1px dashed #ababab;
+        border-top: 1px dashed #ababab;
+
+        &__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.5em;
+        }
+
+        &__tite {
+            display: block;
+            font: 400 150%/1.3 $main-font-family;
+            color: #1a2d40;
+        }
+
+        .price {
+            font: 300 160%/1.3 $main-font-family;
+
+        }
+
+        &__info {
+            margin-bottom: 2em;
+            font-size: 100%;
+            color: #222;
+            display: block;
+            span {
+                font-weight: 500;
+            }
+        }
+
+        .table {
+            display: none;
+            margin-top: 2em;
+            td {
+                font-weight: 300;
+                padding: .2em 2em .2em 0;
+            }
+        }
+
+        &__count {
+            font-size: 200%;
+            margin-bottom: 5px;
+            .minus,
+            .plus {
+                cursor: pointer;
+            }
+        }
+        &__note {
+            color: #c10006;
+            margin-bottom: 1em;
+            font-size: 100%;
+        }
+        &__link {
+            display: flex;
+            align-items: center;
+            li {
+                &:not(:last-child) {
+                    margin-right: 1em;
+                }
+                a {
+                    font: 300 100%/1.3 $main-font-family;
+                    color: #1a2d40;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+   
+
+}
+
+.underline {
+    text-decoration: underline;
+    position: relative;
+    padding-right: 20px;
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 18px;
+        content: "\f105";
+        color: #222;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    &.active {
+        &::after {
+            content: "\f107";
+        }
+    }
+}
