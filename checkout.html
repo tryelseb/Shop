@@ -115,16 +115,16 @@
                 </div>
             </div>
             <div class="row expanded cart-product">
-                <div class="columns large-2">
+                <div class="columns large-2 medium-4 small-12">
                     <div class="cart-product__img">
                         <img src="images/ckeckout-product.jpg" alt="">
                     </div>
                 </div>
-                <div class="columns large-10">
+                <div class="columns large-10 medium-8 small-12">
                     <div class="cart-product__content">
                         <div class="cart-product__row">
                             <a href="javascript:void(0)" class="cart-product__tite">
-                                    White twill weaved cotton shirt
+                                White twill weaved cotton shirt
                             </a>
                             <p class="price">$59</p>
                         </div>
@@ -142,7 +142,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                Collar 
+                                                Collar
                                             </td>
                                             <td>
                                                 <span>Business Classic </span>
@@ -157,7 +157,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                Button 
+                                                Button
                                             </td>
                                             <td>
                                                 <span>Arezzo, white </span>
@@ -191,7 +191,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                Bottom cut: 
+                                                Bottom cut:
                                             </td>
                                             <td>
                                                 <span>
@@ -205,8 +205,8 @@
                         </a>
                         <div class="cart-product__count">
                             <span class="fas fa-minus-square minus"></span>
-							<span class="count" id="count_1">1</span>
-							<span class="fas fa-plus-square plus"></span>
+                            <span class="count" id="count_1">1</span>
+                            <span class="fas fa-plus-square plus"></span>
                         </div>
                         <p class="cart-product__note">
                             Please specify measurements
@@ -224,6 +224,130 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-2em">
+                <div class="columns large-4 medium-6 small-12">
+                    <div class="voucher">
+                        <i class="fas fa-gift"></i>
+                        Gift voucher / campaign code
+                    </div>
+                    <div class="wrp-input">
+                        <input type="text" name="discount_code" class="voucher-input">
+                        <input type="button" name="add_discount_x" class="voucher-btn" value="OK">
+                    </div>
+                </div>
+                <div class="columns large-4 d-none-1023"></div>
+                <div class="columns large-4 medium-6 small-12">
+                    <ul class="total-list">
+                        <li>
+                            <p>Value</p>
+                            <p>$99</p>
+                        </li>
+                        <li>
+                            <p>Shipping</p>
+                            <p>$9</p>
+                        </li>
+                        <li>
+                            <p class="spend">
+                                Spend $51 more to enjoy free shipping!
+                            </p>
+                        </li>
+                        <li>
+                            <p>Amount to pay</p>
+                            <p class="price">$108</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row expanded collapse">
+                <div class="columns small-12">
+                    <div class="payment-title">
+                        <span>SELECT PAYMENT METHOD</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row expanded collapse">
+                <div class="columns small-12">
+                    <div class="payments custom-radio">
+                        <div class="payment">
+                            <input class="paymentMethod" id="adyen_cc" type="radio" name="payment" value="adyen_cc">
+                            <label for="adyen_cc">
+                                <div class="pay_logo">
+                                    <img src="images/visa-mastercard.svg" alt="">
+                                </div>
+                                <div class="checkbox"></div>
+                                <div class="checked"></div>
+                                <div class="pay_descr"></div>
+                            </label>
+                        </div>
+                        <div class="payment">
+                            <input class="paymentMethod" id="paypal" type="radio" name="payment" value="paypal">
+                            <label for="paypal">
+                                <div class="pay_logo">
+                                    <img src="images/paypal.svg" alt="">
+                                </div>
+                                <div class="checkbox"></div>
+                                <div class="checked"></div>
+                                <div class="pay_descr"></div>
+                            </label>
+                        </div>
+                        <div class="payment">
+                            <input class="paymentMethod" id="adyen_klarna" type="radio" name="payment"
+                                value="adyen_klarna">
+                            <label for="adyen_klarna">
+                                <div class="pay_logo">
+                                    <img src="images/klarna.svg" alt="">
+                                </div>
+                                <div class="checkbox"></div>
+                                <div class="checked"></div>
+                                <div class="pay_descr"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row expanded collapse mb-2em">
+                <div class="columns small-12">
+                    <div class="payment-title">
+                        <span>YOUR INFORMATION</span>
+                    </div>
+                </div>
+                <div class="columns large-offset-3 large-6 medium-8 medium-offset-2 small-12">
+                    <form action="#" class="form">
+                        <label for="email">
+                            E-mail address <span class="required">•</span>
+                            <input type="text" id="email">
+                        </label>
+                        <input type="button" class="primaryButton" value="Continue">
+                    </form>
+                </div>
+            </div>
+            <div class="row expanded collapse">
+                <div class="columns small-12">
+                    <div class="payment-title">
+                        <span>SELECT SHIPPING METHOD</span>
+                    </div>
+                </div>
+                <div class="columns large-offset-4 large-4 medium-8 medium-offset-2 small-10 small-offset-1">
+                    <div class="custom-radio">
+                        <input type="radio" checked="checked" name="shipment_method" id="fedex" value="fedex">
+                        <label for="fedex" class="fedex">
+                            <div>
+                                <img alt="fedex" src="//cdn1.tailorstore.com/shipment/fedex.svg">
+                            </div>
+                            FedEx –
+                            <b>$9</b>
+                            <p><i>Express delivery with courier</i></p>
+                            <div class="delivery-date">
+                                Estimated delivery date: <b>02/28/20</b>
+                            </div>
+                            <div class="shipping-method-form">
+                            </div>
+                            <div class="checkbox"></div>
+                            <div class="checked"></div>
+                        </label>
                     </div>
                 </div>
             </div>
