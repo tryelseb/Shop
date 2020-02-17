@@ -239,3 +239,57 @@ a {
         font-size: 1.2vw;
     }
 }
+.number-page {
+    padding: 1em;
+    text-align: center;
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+    .page-number {
+        min-height: 0;
+        margin: 0 .5em;
+        min-width: 2em;
+        text-align: center;
+        border: 2px solid #1a2d40;
+        color: #1a2d40;
+        @media screen and (max-width:500px) {
+            margin: 0 .1em;
+        }
+        &:hover {
+            color: $white-color;
+            background-color: #1a2d40; 
+        }
+        &.active{
+            a {
+                color: $white-color;
+                background-color: #1a2d40;
+            }
+        }
+        a {
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px;
+            font-weight: 400;
+            color: #1a2d40;
+        }
+    }
+    .icon {
+        border-color: transparent;
+        font-size: 150%;
+        min-width: 2em;
+        text-align: center;
+        padding: 10px;
+        a {
+            padding: 0;
+            color: #1a2d40;
+        }
+        &.disabled {
+            color: #e3e3e3;
+        }
+    }
+}

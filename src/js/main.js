@@ -41,4 +41,12 @@ $(document).ready(function () {
     });
   });
 
+  // Filter - open/close
+    $('.filter__title').click(function(){
+      $(this).each(function(){
+        $(this).toggleClass('active');
+        $(this).next('ul').slideToggle('fast');
+      });
+    });
+  //
 });
